@@ -1,0 +1,907 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* !! Don't include in Shopify CSS | START !! */
+h1, h2, h3, h4, h5, h6, button {
+    font-family: "Montserrat", sans-serif;
+}
+
+p, small, li {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+form .placeholder {
+    margin: 0 auto;
+}
+
+.form-item {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form .form-item label {
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: left;
+    color: #9c9c9c;
+}
+
+form .form-item input {
+    padding: 0.75rem 0;
+    border: none;
+    border-bottom: 3px solid #A9A8A9;
+    background-color: #EDEDED;
+}
+/* !! Don't include in Shopify CSS | END !! */
+
+
+
+/* Utility Classes | START */
+
+.section-spacer {
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.content-container {
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding:  0 1rem;
+    width: min(100%, 100rem);
+    text-align: center;
+}
+
+.section-container-black {
+    background-color: #1b1b1b;
+    color: #ffffff; 
+}
+
+.section-container-gray-100 {
+    background-color: #F0F0F0;
+    color: #1b1b1b; 
+}
+.section-container-gray-200 {
+    background-color: #EDEDED;
+    color: #1b1b1b; 
+}
+
+.section-container-footer {
+    background-color: #F5F3ED;
+    color: #1b1b1b; 
+}
+
+.section-container-white {
+    background-color: #ffffff;
+    color: #1b1b1b; 
+}
+
+.section-container-orange {
+    background-color: #FF6C0C;
+    color: #1b1b1b; 
+}
+
+.section-container-gray100 {
+    background-color: #f8f8f8;
+    color: #575757; 
+}
+
+.img-full-width {
+    width: 100%;
+}
+
+a.cta-link {
+    text-decoration: none;
+}
+
+button.cta-template {
+    /* margin-top: 2rem; */
+    padding: 1rem 1rem;
+    width: min(100%, 21rem);
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #FFED00;
+    transition: all 200ms ease;
+}
+
+button.cta-template:hover {
+    color: #1b1b1b;
+    background-color: #fcca00 ;
+}
+
+button.cta-template.orange-bg {
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+    width: min(100%, 25rem);
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #FF6C0C;
+    transition: all 200ms ease;
+}
+
+button.cta-template.orange-bg:hover {
+    color: #1b1b1b;
+    background-color: #fceb00 ;
+}
+
+button.cta-template.secondary {
+    margin-top: 0;
+    padding: 1rem 1rem;
+    width: min(100%, 21rem);
+    font-weight: 800;
+    color: #ffffff;
+    background-color: #1b1b1b;
+    transition: all 200ms ease;
+}
+
+button.cta-template.secondary:hover {
+    color: #1b1b1b;
+    background-color: #fceb00;
+}
+
+button.cta-template.tertiary {
+    margin-top: 0;
+    padding: 1rem 1rem;
+    width: min(100%, 21rem);
+    font-weight: 800;
+    color: #1b1b1b;
+    background-color: #fceb00;
+    transition: all 200ms ease;
+}
+
+button.cta-template.tertiary:hover {
+    color: #ffffff;
+    background-color: #FF6C0C;
+}
+
+button.secondary-nav {
+    margin-top: 1rem;
+    padding: 0.7rem 0;
+    width: min(100%, 15rem);
+    font-weight: 600;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: #FF6C0C;
+    transition: all 200ms ease;
+}
+
+button.secondary-nav:hover {
+    background-color: #1b1b1b;
+}
+
+button.secondary {
+    margin-top: 0;
+    padding: 0.75rem 0.5rem;
+    width: min(100%, 21rem);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    /* border: 2px solid #FF6C0C; */
+    background-color: #FF6C0C;
+    transition: all 200ms ease;
+}
+/* Utility Classes | END */
+
+
+
+/* MAIN STYLES */
+
+/* Header section nav | START */
+/* Navigation */
+.nav-section {
+    margin: 0 0 0 -20px;
+    padding: 1rem 0 1rem 2rem;
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    width: 101%;
+    /* background-color: white; */
+}
+
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+.mobile-nav-toggle2 {
+	display: none;
+}
+
+.mobile-nav-toggle2 svg.hamburger {
+	fill: white;
+}
+
+nav {
+	display: flex;
+	width: 100%;
+}
+
+.primary-navigation {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: 600;
+	color: white;
+}
+
+ul.nav-list {
+	display: flex;
+}
+
+ul.nav-list li {
+	margin-right: 1rem;
+    list-style-type: none;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+ul.nav-list li a {
+	text-decoration: none;
+    color: #ffffff;
+
+}
+
+ul.nav-list li a:hover {
+	color: white;
+
+}
+
+.nav-contact {
+	display: flex;;
+}
+
+
+/* Media query for Navigation */
+@media (max-width: 55rem) {
+	.mobile-nav-toggle2 {
+		display: flex;
+		position: absolute;
+		z-index: 100;
+		top: 0.8rem;
+		left: 0.8rem;
+		background: transparent;
+		border: none;
+	} 
+	
+	button.mobile-nav-toggle2 .line {
+		transition: 
+			y 300ms ease-in 300ms,
+			rotate 300ms ease-in,	
+			opacity 0ms 300ms;
+		transform-origin: center;
+	}
+
+	button.mobile-nav-toggle2[aria-expanded="true"] .line {
+		transition: 
+			y 300ms ease-in,
+			rotate 300ms ease-in 300ms,
+			opacity 0ms 300ms;
+	}
+	
+	button.mobile-nav-toggle2[aria-expanded="true"] .top,
+	button.mobile-nav-toggle2[aria-expanded="true"] .bottom {
+		y: 45px;
+	}
+	
+	button.mobile-nav-toggle2[aria-expanded="true"] .top {
+		rotate: 45deg;
+	}
+	
+	button.mobile-nav-toggle2[aria-expanded="true"] .middle {
+		opacity: 0;
+	}
+	
+	button.mobile-nav-toggle2[aria-expanded="true"] .bottom {
+		rotate: -45deg;
+	}
+
+	.primary-navigation {
+		display: none;
+		padding-left: 0.75rem;
+	}
+
+	.primary-navigation.true {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		background-color: grey;
+		color: white;
+		animation: 300ms fadeIn;
+		animation-fill-mode: forwards;
+		opacity: 0;
+	}
+
+	@keyframes fadeIn {
+		0% {
+		  opacity: 0;
+		}
+		100% {
+		  opacity: 1;
+		}
+	  }
+	  
+
+	.nav-right {
+		flex-direction: column;
+	}
+
+	ul.nav-list {
+		flex-direction: column;
+		font-size: 600;
+		margin-top: 2rem;
+		margin-bottom: 3.5rem;
+		line-height: 3.5rem;
+		color: #ffffff;
+		transition: 300ms;
+	}
+
+	ul.nav-list li a:hover {
+		color: white;
+	}
+
+	.conatct-nav-wrapper {
+		justify-content: center;
+		margin-left: 0rem;
+		margin-bottom: 1rem;
+	}
+
+	.conatct-nav-wrapper .contact-nav {
+		margin-left: 0rem;
+	}
+
+	.nav-contact {
+		flex-direction: column;
+	}
+
+}
+/* Header section nav | END */
+
+
+/* Header section | START */
+
+.adm-expo-2024-header-container {
+    margin: 0;
+    padding: 0 1rem 3rem 1rem;
+    position: relative;
+    overflow: hidden;
+    background-image: url(https://cdn.shopify.com/s/files/1/1393/7021/files/MON24-home-hero-slide1.png?v=1733762937);
+    background-size: cover;
+    background-position: center;
+}
+
+.adm-expo-2024-header-container::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+.adm-expo-2024-header-container .content-container {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 20;
+}
+
+.adm-expo-2024-header-container .img-container {
+    padding: 0 1rem;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+}
+
+.adm-expo-2024-header-container img.liftow-logo  {
+    max-width: 300px;
+}
+
+.header-content-container h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 110%;
+}
+
+.header-content-container p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 160%
+}
+
+.adm-expo-2024-header-container .secondary-content p {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    line-height: 120%
+}
+
+.logo-partners-container {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-partners-container .partner-logos {
+    width: min(100%, 200px);
+}
+
+.logo-partners-container .partner-logos.liftow {
+    width: min(100%, 280px);
+}
+
+.adm-expo-2024-header-container .header-content-container img.cta-desktop {
+    width: min(100%, 900px);
+}
+
+.adm-expo-2024-header-container .product-img {
+    margin: 2rem 0 2rem 0;
+    width: min(100%, 300px);
+}
+
+
+@media (min-width: 75rem) {
+    .adm-expo-2024-header-container {
+        padding: 0 1rem 5rem 1rem;
+    }
+    
+    .adm-expo-2024-header-container .content-container {
+        margin-top: 4rem;
+        width: min(100%, 1200px);
+        position: relative;
+        left: -5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "img cta";
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .adm-expo-2024-header-container .header-content-container {
+        grid-area: cta;
+        text-align: left;
+    }
+
+    .adm-expo-2024-header-container .product-img {
+        width: min(100%, 370px);
+        grid-area: img;
+        justify-self: flex-end;
+    }
+
+    .adm-expo-2024-header-container .img-container {
+        justify-content: start;
+    }
+ 
+    .header-content-container h1{
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .header-content-container p {
+        text-align: left;
+    }
+
+    .logo-partners-container {
+        margin-top: 2rem !important;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+    
+    .logo-partners-container .partner-logos {
+        width: min(100%, 100px);
+    }
+    
+    .logo-partners-container .partner-logos.liftow {
+        width: min(100%, 170px);
+    }
+}
+
+
+button.cta-template.mobile {
+    margin-bottom: 2rem;
+}
+
+/* Header section | END */
+
+
+/* Form | START */
+#adm-expo-2024-form {
+    margin-bottom: -2rem;
+    background-color: #E9E9E9;
+}
+
+.form-content-container.content-container {
+    padding: 0 0.5rem;
+}
+
+.action-contact-form {
+    margin: 0 auto 2rem auto;
+    padding: 2.5rem 1rem;
+    width: min(100%, 75rem);
+    position: relative;
+    z-index: 500;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, .2);
+}
+
+.action-contact-form h2 {
+    margin: 0 0 2.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: #1b1b1b;
+}
+
+
+@media (min-width: 45rem) {
+    
+    /* .action-contact-form h3 {
+        font-size: 2rem;
+        line-height: 90%;
+    } */
+    
+}
+
+@media (min-width: 75rem) {
+    .action-contact-form {
+        padding: 2.5rem 2rem;
+        top: -3rem;
+    }
+
+    .action-contact-form form .form-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+
+
+.action-contact-form button {
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #FF6C0C;
+}
+
+/* Form | END */
+
+
+
+/* Partner Card Nav | START */
+.card-nav-container {
+    background-color: #e9e9e9;
+}
+
+.card-container {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-areas: 
+        "liftow"
+        "bastian"
+        "training"
+        "ticf"
+    ;
+    gap: 2rem;
+    text-align: center;
+}
+
+.card-nav {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ffffff;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.card-nav.card-liftow {
+    grid-area: liftow ;
+}
+
+.card-nav.card-liftow img.equipment {
+    width: min(100%, 380px);
+}
+
+.card-nav.card-liftow .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-nav.card-bastian {
+    grid-area: bastian;
+}
+
+.card-nav.card-lift-training {
+    grid-area: training;
+}
+
+.card-nav.card-ticf {
+    grid-area: ticf;
+}
+
+.card-nav h2 {
+    margin: 1rem 0 0.5rem 0;
+    color: #77777A;
+}
+
+.card-nav p {
+    margin: 0 auto 1rem auto;
+    width: min(100%, 500px);
+    color: #77777A;
+}
+
+.card-nav img.card-nav-logo {
+    width: min(100%, 200px);
+}
+
+.card-nav img.card-nav-logo.liftow {
+    width: min(100%, 300px);
+}
+
+.card-nav button.cta-template.secondary {
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .card-container {
+        width: min(100%, 90rem);
+        grid-template-areas: 
+            "liftow liftow liftow"
+            "bastian training ticf"
+        ;
+        gap: 1rem;
+    }
+
+    .card-nav.card-liftow {
+        padding: 2rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-nav.card-liftow img.equipment {
+        width: min(100%, 480px);
+    }
+
+    .card-nav.btm-row .card-nav-content-container {
+        height: 300px;
+    }
+    
+    .card-nav.btm-row .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .card-nav.btm-row .card-nav-content-container {
+        height: 270px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .card-nav.btm-row .card-nav-content-container {
+        height: 250px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .card-nav.card-liftow {
+        padding: 2rem 8rem;
+    }
+
+    .card-nav.card-liftow img.equipment {
+        width: min(100%, 580px);
+    }
+
+    .card-nav.btm-row .card-nav-content-container {
+        height: 200px;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+    .card-nav.card-liftow {
+        padding: 2rem 10rem;
+    }
+
+}
+
+/* Partner Card Nav | END */
+
+
+/* Lift Formation | START */
+.lift-formation  {
+    padding: 2rem 0;
+}
+
+.lift-formation .content-container {
+    display: flex;
+    flex-direction: column;
+    color: #77777a;
+}
+
+.lift-formation .content-container .content {
+    margin: 0 auto;
+    width: min(100%, 1000px);
+}
+
+.lift-formation .content-container img {
+    margin: 0 auto 2rem auto;
+    width: min(100%, 400px);
+}
+
+.lift-formation .content-container h2 {
+    margin-bottom: 1rem;
+}
+
+.lift-formation .content-container .supporting-text {
+    margin-bottom: 1rem;
+}
+
+.lift-formation .card-container {
+    width: min(100%, 500px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.lift-formation .content-container .card {
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #f0f0f0;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.lift-formation .card-img-container {
+    margin: 0 auto 1rem auto;
+    padding: 0.5rem;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #9c9c9c;
+    border-radius: 200px;
+    background-color: #ffffff;
+}
+
+@media (min-width: 1100px) {
+    .lift-formation .card-container {
+        width: 1100px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Lift Formation | END */
+
+
+
+/* TICF | START */
+
+.ticf {
+    padding: 2rem 0;
+    color: #ffffff;
+    background-color: #1b1b1b;
+}
+
+.ticf img {
+    margin: 0 auto 2rem auto;
+    width: min(100%, 400px);
+}
+
+.ticf .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.ticf h1 {
+    margin-bottom: 1rem;
+}
+
+.ticf .supporting-text {
+    margin-bottom: 1rem;
+}
+
+
+.ticf button {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+
+    .ticf .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .ticf .content-desc-container {
+        text-align: left;
+    }
+    
+}
+
+/* TICF | END */
+
+
+
+/* Footer | Condensed section | START */
+.footer-Q32024-ti-tu-landing-page .content-container-footer {
+    margin-bottom: 0;
+    padding: 3.5rem 2rem 1rem 2rem;
+    text-align: center;
+}
+
+.footer-content-top img.liftow-logo  {
+    width: 250px;
+}
+
+
+.social-icon-container {
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icon-container img {
+    height: 25px;
+}
+
+.liftow-legal {
+    color: #77777A;
+}
+
+@media (min-width: 75rem) {
+    .footer-Q32024-ti-tu-landing-page .footer-content-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-content-top img.liftow-logo  {
+        width: 400px;
+    }
+
+    .social-icon-container {
+        margin-bottom: 0;
+        align-items: center;
+    }
+}
+/* Footer | Condensed section | END */
